@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 3:55 AM , 04 /01/2025 | DOM  </title>
+</head>
+<body style="background-color:black; color: aliceblue;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+    
+</body>
+<script>
+    //Apporach 1
+    function addLanguage (langName) {
+        const li = document.createElement('li')
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("python")
+    addLanguage("Java")
+    
+    // Appoach 2 (optimised)
+    function addoptilanguage (langName) {
+
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+        
+    }
+
+    addoptilanguage("TypeScript")
+
+
+    //edit
+    const secondLang = document.querySelector("li:nth-child(2)")
+    // secondLang.innerHTML =" MOJO"
+    const newli = document.createElement("li")
+    newli.textContent = "Mojo"
+    secondLang.replaceWith(newli)
+
+
+    // edit
+    const firstLan = document.querySelector("li:first-child")
+    firstLan.outerHTML = '<li>Ruby</li>'
+
+
+    //remove
+    const lastLang = document.querySelector("li:last-child")
+    lastLang.remove()
+
+</script>
+</html>

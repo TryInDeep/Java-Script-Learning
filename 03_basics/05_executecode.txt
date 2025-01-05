@@ -1,0 +1,36 @@
++++++++++ JavaScript Execution Context ++++++++++++
+
+[{}] ==> Global Execution Context 
+|=> Global execution context 
+|=> function execution comtext
+|=> Eval Execution Context 
+
+[{}]----> Memory Creation Phase 
+    ----> Execution Phase 
+
+
+1. Global Execution -> this
+
+
+//   code 
+let val1 = 10 
+let val2 = 5
+
+function addNum(num1,num2)
+{
+    let total = num1 + num2
+    return total;
+}
+
+let result1 = addNum(val1,val2);
+let result2 = addNum(10,2);
+
+2. Memory Creation Phase -----
+val1 -> undefined 
+val2 -> undefined
+addNum -> function Defination
+result1 -> undefined
+result2 -> undefined
+
+
+-----------------------

@@ -30,29 +30,53 @@
     //attachEvent
     //jquerry - on
 
+
+
     // type , timestamp, defaultPrevented
     // target, srcElement, toElement, currentTarget
     // clientX , clientY , screenX, screenY
     // altkey , ctrlkey, shiftkey , keyCode
+
+
+
     //Approach 2
     // document.getElementById('owl').addEventListener('click',function (e) {
     //     console.log(e); // pointerevents 
         
     // })
     // event Propagation (bubbling events and capturing )
-    document.getElementById('images').addEventListener('click',function (e) {
-        console.log('Clicked on all images');
+    // document.getElementById('images').addEventListener('click',function (e) {
+    //     console.log('Clicked on all images');
         
         
-    })
-    document.getElementById('owl').addEventListener('click',function (e) {
-        console.log('Clicked on owl');
-        e.stopPropagation();
-        
-        
+    // },false)
+    // document.getElementById('owl').addEventListener('click',function (e) {
+    //     console.log('Clicked on owl');
+    //     e.stopPropagation();
+    // },false)
+
+
+    // document.getElementById('google').addEventListener('click',function (e){
+    //     console.log('Google CLicked');
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    // },false)
+
+    // How to remove element 
+
+    document.querySelector('#images').addEventListener('click',function(e) {
+        console.log(e.target.tagName); 
+
+    if(e.target.tagName === 'IMG')
+    {
+        let removeIt = e.target.perentNode
+        removeIt.remove();
+    }
+        // et removeIt = e.target.perentNode 
+        // removeIt.remove();
+        // removeIt.perentNode.removeChild(removeIt)
     })
 
 
-    
 </script>
 </html>

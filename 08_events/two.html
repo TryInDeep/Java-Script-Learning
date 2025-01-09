@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+
+  <body>
+    <h1>  Try In Deep </h1>
+    <button id="stop">stop</button>
+  </body>
+  <script>
+
+    // SET TIMEOUT
+    // setTimeout(function(){
+    //   console.log('Tridip');
+    // },2000)
+
+    const saytridip = function(){
+       console.log('Tridip');
+    }
+
+    const changeText = function (){
+      document.querySelector('h1').innerHTML = "Trying My Best"
+    }
+
     
-</body>
+    // setTimeout(saytridip,2000)
+
+    // CLEAR TIMEOUT
+    const changeMe = setTimeout(changeText,2000)
+    document.querySelector('#stop').addEventListener('click', function (){
+      clearTimeout(changeMe)
+      console.log("STOPPED");
+      
+      }
+    )
+
+     
+  </script>
 </html>

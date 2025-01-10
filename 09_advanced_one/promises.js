@@ -1,6 +1,7 @@
 // fetch('https://something.com').then().catch().finally();
 
 //+++++++++++++++++++ USING RESOLVED and REJECT +++++++++++++++++ //
+
 // method 1 
 const promiseOne = new Promise(function(resolve, reject){
     // do async task 

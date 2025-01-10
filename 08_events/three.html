@@ -1,11 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+
+  <body>
+    <h1>  Try In Deep </h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
     
-</body>
+  </body>
+  <script>
+    
+//    const sayName = function(str){
+//    console.log(str, Date.now());
+//    }
+//    const intervalID = setInterval(sayName,1000,"TryInDeep")
+
+//   Syntax =  setInterval (callback, time, arguments)
+
+//   clearInterval(intervalID)
+
+
+    // start and Stop 
+    const start = ()=>{
+        console.log("Tridip", Date.now())
+    }
+     let stop;
+   document.querySelector('#start').addEventListener('click',function(){
+        stop = setInterval(start,1000)
+   })
+
+    // const stop = setInterval(start,1000)
+   document.querySelector('#stop').addEventListener('click',function(){
+    
+    clearInterval(stop)
+   })
+
+
+   
+
+
+    
+
+
+
+  </script>
 </html>
